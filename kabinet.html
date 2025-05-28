@@ -1,51 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Личный кабинет</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    form {
-      margin-bottom: 20px;
-    }
-    input, textarea {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 8px;
-    }
-    .post {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 15px;
-    }
-    .post img {
-      margin-top: 10px;
-      max-width: 300px;
-    }
-    .delete-btn {
-      margin-top: 10px;
-      background-color: red;
-      color: white;
-      padding: 5px 10px;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css?v=1" />
 </head>
 <body>
 
-  <h2>Добавить новость</h2>
+  <button id="openPostModalBtn">Создать пост</button>
 
-  <form id="newsForm">
-    <input type="text" id="newsTitle" placeholder="Заголовок" required />
-    <textarea id="newsText" placeholder="Текст новости" required></textarea>
-    <input type="file" id="newsImage" accept="image/*" />
-    <button type="submit">Добавить новость</button>
-  </form>
+  <div id="postModal" class="modal">
+    <div class="modal-content">
+      <span id="closePostModalBtn" class="close">&times;</span>
+      <h2>Добавить новость</h2>
+      <form id="newsForm">
+        <input type="text" id="newsTitle" placeholder="Заголовок" required />
+        <textarea id="newsText" placeholder="Текст новости" required></textarea>
+        <input type="file" id="newsImage" accept="image/*" />
+        <button type="submit">Добавить новость</button>
+      </form>
+    </div>
+  </div>
 
   <h2>Мои новости</h2>
   <div id="userNewsContainer"></div>
