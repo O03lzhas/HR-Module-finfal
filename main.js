@@ -35,15 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
       openModalBtn.textContent = 'Войти / Регистрация';
       openModalBtn.onclick = (e) => {
         e.preventDefault();
-        if (!localStorage.getItem('currentUser')) modal.style.display = 'flex';
+        if (modal) modal.style.display = 'flex';
       };
     }
   }
-
-  if (openModalBtn) openModalBtn.onclick = (e) => {
-    e.preventDefault();
-    if (modal) if (!localStorage.getItem('currentUser')) modal.style.display = 'flex';
-  };
 
   if (closeCross) closeCross.onclick = () => {
     modal.style.display = 'none';
