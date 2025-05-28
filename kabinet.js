@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     postModal.style.display = 'none';
   });
 
-  // Закрыть модалку при клике вне контента
   postModal.addEventListener('click', (e) => {
     if (e.target === postModal) {
       postModal.style.display = 'none';
