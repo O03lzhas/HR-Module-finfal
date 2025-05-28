@@ -1,12 +1,16 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
+  margin: 0;
+  background-color: #fff;
 }
 
+/* Заголовки */
 h2 {
   margin-bottom: 10px;
 }
 
+/* Общие стили для форм */
 input,
 textarea {
   display: block;
@@ -16,6 +20,7 @@ textarea {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
@@ -26,13 +31,14 @@ button {
   border: none;
   background-color: #007bff;
   color: white;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-/* Стили для карточки новости */
+/* Карточки новостей для кабинета и news */
 .post {
   border: 1px solid #ccc;
   padding: 15px;
@@ -52,9 +58,11 @@ button:hover {
   background-color: red;
   color: white;
   padding: 5px 10px;
+  border: none;
+  cursor: pointer;
 }
 
-/* Стили лайков */
+/* Кнопка лайка */
 .like-btn {
   background-color: transparent;
   border: none;
@@ -62,17 +70,19 @@ button:hover {
   font-size: 16px;
   margin-top: 10px;
   color: #555;
+  transition: color 0.3s ease;
 }
+
 .like-btn.liked {
   color: red;
 }
 
-/* Модальное окно */
+/* Модальное окно (только для кабинета) */
 .modal {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  display: none; /* Скрыто по умолчанию */
+  display: none; /* скрыто по умолчанию */
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -95,7 +105,9 @@ button:hover {
   font-weight: bold;
   color: #888;
   cursor: pointer;
+  user-select: none;
 }
+
 .close:hover {
   color: black;
 }
