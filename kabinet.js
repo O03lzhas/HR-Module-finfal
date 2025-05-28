@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const openModalBtn = document.getElementById('openPostModalBtn');
+  const closeModalBtn = document.getElementById('closePostModalBtn');
+  const postModal = document.getElementById('postModal');
+
   const form = document.getElementById('newsForm');
   const newsContainer = document.getElementById('userNewsContainer');
   const titleInput = document.getElementById('newsTitle');
@@ -17,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       postDiv.innerHTML = `
         <h3>${post.title}</h3>
         <p>${post.text}</p>
-        ${post.image ? `<img src="${post.image}" alt="Изображение" style="max-width: 300px;">` : ''}
+        ${post.image ? `<img src="${post.image}" alt="Изображение">` : ''}
         <button class="delete-btn">Удалить</button>
       `;
 
@@ -38,7 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = textInput.value.trim();
     const file = imageInput.files[0];
 
-    if (!title || !text) return alert('Заполните заголовок и текст');
+    if (!title || !text) {
+      alert('Заполните заголовок и текст');
+      return;
+    }
 
     if (file) {
       const reader = new FileReader();
@@ -59,7 +66,23 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('newsList', JSON.stringify(newsList));
     form.reset();
     renderNews();
+    postModal.style.display = 'none';
   }
+
+  openModalBtn.addEventListener('click', () => {
+    postModal.style.display = 'flex';
+  });
+
+  closeModalBtn.addEventListener('click', () => {
+    postModal.style.display = 'none';
+  });
+
+  // Закрыть модалку при клике вне контента
+  postModal.addEventListener('click', (e) => {
+    if (e.target === postModal) {
+      postModal.style.display = 'none';
+    }
+  });
 
   renderNews();
 });
