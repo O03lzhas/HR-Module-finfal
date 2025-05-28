@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Document</title>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="news-page">
+<!-- HEADER -->
+<div class="header">
+<a href="./"><img alt="" class="header_logo" src="./img/SnapBG.ai_1744380875777.png"/></a>
+</div>
+<div class="fixed_links">
+<a class="fixed_links__item" href="./news.html">Новости</a>
+<a class="fixed_links__item" href="./vacancy.html">Вакансий</a>
+<a class="fixed_links__item" href="./workers.html">Работники</a>
+<a class="fixed_links__item" href="./kabinet.html">Кабинет</a>
+<a class="fixed_links__item" href="#" id="open_modal_btn">Войти / Регистрация</a>
+</div>
+<!-- Обучающие материалы -->
+<div class="news-page fixed_tools">
+<h2 class="fixed_tools__title">🧠 Обучающие материалы</h2>
+<a class="fixed_links__item" href="https://learn.javascript.ru/" target="_blank">📘 Учебник JavaScript</a>
+<a class="fixed_links__item" href="https://eloquentjavascript.net/" target="_blank">📗 Книга по JS</a>
+<a class="fixed_links__item" href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank">🛠 Документация MDN</a>
+<a class="fixed_links__item" href="https://www.freecodecamp.org/" target="_blank">🎓 FreeCodeCamp</a>
+</div>
+<!-- Модальное окно -->
+<div class="modal" id="modal">
+<div class="modal-window">
+<button class="modal-close-btn" id="close_modal_btn">×</button>
+<div class="modal-tabs">
+<button class="tab-btn active" data-tab="login">Вход</button>
+<button class="tab-btn" data-tab="register">Регистрация</button>
+</div>
+<div class="modal-content modal-login active">
+<input class="inp_modal" id="login-username" placeholder="Имя пользователя" type="text"/>
+<input class="inp_modal" id="login-password" placeholder="Пароль" type="password"/>
+<button class="modal_btn" id="login-btn">Войти</button>
+<p id="login-message" style="color:red; margin-top:10px;"></p>
+</div>
+<div class="modal-content modal-register">
+<input class="inp_modal" id="register-username" placeholder="Имя пользователя" type="text"/>
+<input class="inp_modal" id="register-email" placeholder="Email" type="email"/>
+<input class="inp_modal" id="register-password" placeholder="Пароль" type="password"/>
+<button class="modal_btn" id="register-btn">Зарегистрироваться</button>
+<p id="register-message" style="color:red; margin-top:10px;"></p>
+</div>
+</div>
+<div class="overlay"></div>
+</div>
+<!-- MAIN CONTENT -->
+<div class="main-container">
+<div class="content">
+<h1 class="header-title">Новости</h1>
+<div class="card card_space"><!--POST-->
+<div class="user-info">
+<div class="profile">
+<div class="profile-img">
+<img alt="" class="cover" src="./img/1.jpg"/>
+</div>
+<h3>Olzhas Akzholbay<br/><span>QA</span></h3>
+</div>
+</div>
+<div class="img">
+<img alt="" src="./img/2.jpg"/>
+</div>
+<div class="buttons">
+<img alt="" src="./img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"/>
+<img alt="" src="./img/comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"/>
+</div>
+<h4 class="likes">20 likes</h4>
+<h4 class="message"><b>Lorem ipsum dolor sit amet.<br/></b>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptate?</h4>
+</div><!--POST-->
+<div class="card card_space"><!--POST-->
+<div class="user-info">
+<div class="profile">
+<div class="profile-img">
+<img alt="" class="cover" src="./img/1.jpg"/>
+</div>
+<h3>Елена Кузнецова<br/><span>Контент</span></h3>
+</div>
+</div>
+<div class="img">
+<img alt="" src="./img/4.jpg"/>
+</div>
+<div class="buttons">
+<img alt="" src="./img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"/>
+<img alt="" src="./img/comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"/>
+</div>
+<h4 class="likes">20 likes</h4>
+<h4 class="message"><b>Lorem ipsum dolor sit amet.<br/></b>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptate?</h4>
+</div><!--POST-->
+<div class="card card_space"><!--POST-->
+<div class="user-info">
+<div class="profile">
+<div class="profile-img">
+<img alt="" class="cover" src="./img/1.jpg"/>
+</div>
+<h3>Игорь Морозов<br/><span>Контент</span></h3>
+</div>
+</div>
+<div class="img">
+<img alt="" src="./img/5.jpg"/>
+</div>
+<div class="buttons">
+<img alt="" src="./img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"/>
+<img alt="" src="./img/comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"/>
+</div>
+<h4 class="likes">20 likes</h4>
+<h4 class="message"><b>Lorem ipsum dolor sit amet.<br/></b>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptate?</h4>
+</div><!--POST-->
+</div>
+</div>
+<!--Модальное окно-->
+<script src="main.js"></script>
+<script src="news.js"></script></body>
+</html>
